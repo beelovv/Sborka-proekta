@@ -7,12 +7,11 @@ entry: "./index.js",
 output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, "build"),
-    assetModuleFilename: 'assets/[name][ext]',
     clean: true
     },
 plugins:[ new CopyPlugin({
   patterns: [
-    { from: "./img", to: "./" },
+    { from: "./img", to: "./assets" },
   ],
 }),new MiniCssExtractPlugin({
     filename: 'index.css'
